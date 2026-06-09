@@ -1,0 +1,48 @@
+Package: epidesc
+Title: Calculation of Epidemiological Descriptors
+Version: 0.1.0
+Authors@R: c(
+    person(given = "Raquel Martins", family = "Lana", email = "raquel.lana@bsc.es",
+           role = c("aut"), comment = c(ORCID = "0000-0002-7573-1364")),
+    person(given = "Carles", family = "Milà", email = "carles.milagarcia@bsc.es",
+           role = c("aut", "cre"), comment = c(ORCID = "0000-0003-0470-0760")),
+    person(given = "Iasmin Ferreira", family = "de Almeida", 
+           role = c("aut")),
+    person(given = "Claudia Torres", family = "Codeço", 
+           role = c("aut"), comment = c(ORCID = "0000-0003-1174-178X")),
+    person(given = "Daniela", family = "Lührsen", 
+           role = c("aut"), comment = c(ORCID = "0009-0002-6340-5964")),
+    person(given = "Diego Ricardo Xavier", family = "Silva", 
+           role = c("aut"), comment = c(ORCID = "0000-0001-5259-7732")),
+    person(given = "Christovam", family = "Barcellos", 
+           role = c("aut"), comment = c(ORCID = "0000-0002-1161-2753")),
+    person(given = "Raphael", family = "Saldanha", 
+           role = c("aut"), comment = c(ORCID = "0000-0003-0652-8466")),
+    person(given = "Rachel", family = "Lowe", 
+           role = c("aut"), comment = c(ORCID = "0000-0003-3939-7343"))
+    )
+Description: Provides tools to easily compute a series of epidemiological
+    indicators to characterise different transmission profiles of infectious
+    diseases with a simple pipeline: format the dates in epiyearweek format,
+    choose the descriptors and their parameters, and compute them. The
+    package is based on the publication How heterogeneous is the dengue
+    transmission profile in Brazil? A study in six Brazilian states
+    (https://doi.org/10.1371/journal.pntd.0010746).
+License: GPL (>= 3)
+URL: https://earth.bsc.es/gitlab/ghr/epidesc
+BugReports: https://earth.bsc.es/gitlab/ghr/epidesc/-/issues
+Depends: 
+    R (>= 4.1.0)
+Imports: 
+    lubridate,
+    nseq
+Encoding: UTF-8
+Roxygen: list(markdown = TRUE)
+RoxygenNote: 7.3.3
+Suggests: 
+    knitr,
+    rmarkdown,
+    testthat (>= 3.0.0)
+VignetteBuilder: knitr
+Config/testthat/edition: 3
+LazyData: true
