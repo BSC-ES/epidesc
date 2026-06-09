@@ -1,14 +1,15 @@
 # epidesc  <img src='inst/figures/logo_BSC.png' align="right" width="16%" /> 
 
 <!-- badges: start -->
-[![License](https://img.shields.io/badge/License-AGPL_v2-brightgreen.svg?style=flat)](https://www.gnu.org/licenses/agpl-2.0.html)
+[![License](http://img.shields.io/badge/license-GPL%20%28%3E=%202%29-brightgreen.svg?style=flat)](https://www.gnu.org/licenses/old-licenses/gpl-2.0.html)
 <!-- badges: end -->
 
-<img src='inst/figures/epidesc.png' align="right" width="16%" />
 
 ## Overview
 
 The R package **epidesc** provides the tools to easily compute a series of epidemiological indicators to characterise different transmission profiles of infectious diseases. The work is based on the publication How heterogeneous is the dengue transmission profile in Brazil? A study in six Brazilian states (https://doi.org/10.1371/journal.pntd.0010746) published in PLoS Neglected Tropical Diseases by Iasmim Ferreira de Almeida, Raquel Martins Lana and Cláudia Torres Codeço in 2022. 
+
+<img src='inst/figures/epidesc.png' align="right" width="16%" />
 
 The **epidesc** pipeline to compute the indicators is the following:
 * Formatting dates in *epiyearweek* format.
@@ -55,7 +56,7 @@ please open an issue with your idea or get in touch with Raquel Martins (raquel.
 `epidesc` is still in development and not on CRAN. You can install the development version of epidesc as follows:
 
 ``` r
-devtools::install_git("https://earth.bsc.es/gitlab/ghr/ghrmodel.git")
+pak::pak("https://github.com/BSC-ES/epidesc.git")
 ```
 
 ## Package authors 
