@@ -52,7 +52,7 @@ knitr::kable(desc_list())
 ## Contributions
 
 We are very interested in keep expanding **epidesc** with new descriptors and we are open to contributions. If would like to contribute,
-please open an issue with your idea or get in touch with Raquel Martins (raquel.lana@bsc.es) or Carles Milà (carles.milagarcia@bsc.es) to discuss its inclusion.
+please open an issue with your idea or get in touch with Raquel Martins Lana (raquel.lana@bsc.es, raquelmlana@gmail.com) or Carles Milà (carles.milagarcia@bsc.es) to discuss its inclusion.
 
 ## Installation
 
