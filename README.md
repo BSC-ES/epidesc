@@ -3,8 +3,6 @@
 <!-- badges: start -->
 [![License](http://img.shields.io/badge/license-GPL%20%28%3E=%202%29-brightgreen.svg?style=flat)](https://www.gnu.org/licenses/old-licenses/gpl-2.0.html)
 [![R-CMD-check](https://github.com/BSC-ES/epidesc/actions/workflows/R-CMD-check.yaml/badge.svg)](https://github.com/BSC-ES/epidesc/actions/workflows/R-CMD-check.yaml)
-[![Codecov test coverage](https://codecov.io/gh/BSC-ES/epidesc/graph/badge.svg)](https://app.codecov.io/gh/BSC-ES/epidesc)
-[![test-coverage](https://github.com/BSC-ES/epidesc/actions/workflows/test-coverage.yaml/badge.svg)](https://github.com/BSC-ES/epidesc/actions/workflows/test-coverage.yaml)
 <!-- badges: end -->
 
 
