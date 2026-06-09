@@ -64,7 +64,7 @@ pak::pak("https://github.com/BSC-ES/epidesc.git")
 
 ## Package authors 
 
-**[Raquel Martins, PhD](https://www.bsc.es/martins-lana-raquel)**
+**[Raquel Martins Lana, PhD](https://www.bsc.es/martins-lana-raquel)**
 <a href="https://orcid.org/0000-0002-7573-1364" style="margin-left: 15px;"><img src="https://orcid.org/sites/default/files/images/orcid_16x16.png" alt="ORCID" style="width: 16px; height: 16px;" /></a>\
 Barcelona Supercomputing Center
 
