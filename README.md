@@ -72,7 +72,8 @@ Barcelona Supercomputing Center
 <a href="https://orcid.org/0000-0003-0470-0760" style="margin-left: 15px;"><img src="https://orcid.org/sites/default/files/images/orcid_16x16.png" alt="ORCID" style="width: 16px; height: 16px;" /></a>\
 Barcelona Supercomputing Center
 
-**Iasmin Ferreira de Almeida, PhD**\
+**Iasmin Ferreira de Almeida, PhD**
+<a href="https://orcid.org/0000-0002-9334-4093" style="margin-left: 15px;"><img src="https://orcid.org/sites/default/files/images/orcid_16x16.png" alt="ORCID" style="width: 16px; height: 16px;" /></a>\
 Getulio Vargas Foundation (FGV)
 
 **Claudia Torres Codeço, PhD**
