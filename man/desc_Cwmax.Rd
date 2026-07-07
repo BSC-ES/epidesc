@@ -11,8 +11,11 @@ desc_Cwmax(df)
 unit with columns 'time' (epiyearweek), 'cases', 'epiweek' and 'epiyear'.}
 }
 \value{
-The computed Cmax epidescriptor.
+The computed Cwmax epidescriptor.
 }
 \description{
 Maximum duration in consecutive weeks without cases.
+}
+\examples{
+desc_Cwmax(dengueRio)
 }

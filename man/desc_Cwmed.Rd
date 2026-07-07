@@ -11,8 +11,11 @@ desc_Cwmed(df)
 unit with columns 'time' (epiyearweek), 'cases', 'epiweek' and 'epiyear'.}
 }
 \value{
-The computed Cmed epidescriptor.
+The computed Cwmed epidescriptor.
 }
 \description{
 Median duration in consecutive weeks without cases.
+}
+\examples{
+desc_Cwmed(dengueRio)
 }

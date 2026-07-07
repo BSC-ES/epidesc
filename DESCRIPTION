@@ -27,10 +27,10 @@ Description: Provides tools to easily compute a series of epidemiological
     choose the descriptors and their parameters, and compute them. The
     package is based on the publication How heterogeneous is the dengue
     transmission profile in Brazil? A study in six Brazilian states
-    (https://doi.org/10.1371/journal.pntd.0010746).
+    <doi:10.1371/journal.pntd.0010746>.
 License: GPL (>= 3)
-URL: https://earth.bsc.es/gitlab/ghr/epidesc
-BugReports: https://earth.bsc.es/gitlab/ghr/epidesc/-/issues
+URL: https://github.com/BSC-ES/epidesc
+BugReports: https://github.com/BSC-ES/epidesc/issues
 Depends: 
     R (>= 4.1.0)
 Imports: 
@@ -38,7 +38,6 @@ Imports:
     nseq
 Encoding: UTF-8
 Roxygen: list(markdown = TRUE)
-RoxygenNote: 7.3.3
 Suggests: 
     knitr,
     rmarkdown,
@@ -46,3 +45,4 @@ Suggests:
 VignetteBuilder: knitr
 Config/testthat/edition: 3
 LazyData: true
+Config/roxygen2/version: 8.0.0

@@ -16,3 +16,6 @@ The computed Tp epidescriptor.
 \description{
 Week where the maximum peak occurred.
 }
+\examples{
+desc_Tp(dengueRio)
+}

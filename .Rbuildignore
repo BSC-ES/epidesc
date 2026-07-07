@@ -1,1 +1,5 @@
 ^\.github$
+^epidesc\.Rproj$
+^LICENSE\.md$
+^doc$
+^Meta$

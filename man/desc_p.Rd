@@ -16,5 +16,8 @@ unit with columns 'time' (epiyearweek), 'cases', 'epiweek' and 'epiyear'.}
 The computed p epidescriptor.
 }
 \description{
-Proportion fo weeks with at least 'x' cases.
+Proportion of weeks with at least 'x' cases.
+}
+\examples{
+desc_p(dengueRio, 50)
 }

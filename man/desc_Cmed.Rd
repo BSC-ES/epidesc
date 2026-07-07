@@ -18,3 +18,6 @@ The computed Cmed epidescriptor.
 \description{
 Median duration in consecutive weeks with at least 'x' cases.
 }
+\examples{
+desc_Cmed(dengueRio, 50)
+}

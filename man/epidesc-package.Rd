@@ -6,13 +6,13 @@
 \alias{epidesc-package}
 \title{epidesc: Calculation of Epidemiological Descriptors}
 \description{
-Provides tools to easily compute a series of epidemiological indicators to characterise different transmission profiles of infectious diseases with a simple pipeline: format the dates in epiyearweek format, choose the descriptors and their parameters, and compute them. The package is based on the publication How heterogeneous is the dengue transmission profile in Brazil? A study in six Brazilian states (https://doi.org/10.1371/journal.pntd.0010746).
+Provides tools to easily compute a series of epidemiological indicators to characterise different transmission profiles of infectious diseases with a simple pipeline: format the dates in epiyearweek format, choose the descriptors and their parameters, and compute them. The package is based on the publication How heterogeneous is the dengue transmission profile in Brazil? A study in six Brazilian states \doi{10.1371/journal.pntd.0010746}.
 }
 \seealso{
 Useful links:
 \itemize{
-  \item \url{https://earth.bsc.es/gitlab/ghr/epidesc}
-  \item Report bugs at \url{https://earth.bsc.es/gitlab/ghr/epidesc/-/issues}
+  \item \url{https://github.com/BSC-ES/epidesc}
+  \item Report bugs at \url{https://github.com/BSC-ES/epidesc/issues}
 }
 
 }
@@ -21,6 +21,7 @@ Useful links:
 
 Authors:
 \itemize{
+  \item Carles Milà \email{carles.milagarcia@bsc.es} (\href{https://orcid.org/0000-0003-0470-0760}{ORCID})
   \item Raquel Martins Lana \email{raquel.lana@bsc.es} (\href{https://orcid.org/0000-0002-7573-1364}{ORCID})
   \item Iasmin Ferreira de Almeida
   \item Claudia Torres Codeço (\href{https://orcid.org/0000-0003-1174-178X}{ORCID})

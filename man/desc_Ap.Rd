@@ -16,3 +16,6 @@ The computed Ap epidescriptor.
 \description{
 Week where the maximum peak occurred.
 }
+\examples{
+desc_Ap(dengueRio)
+}
