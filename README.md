@@ -60,7 +60,7 @@ knitr::kable(desc_list())
 | Period without cases | Cwf | Frequency of periods of consecutive weeks with at least 'n' weeks without cases. | n |  |
 | Period without cases | Cwmax | Maximum duration in consecutive weeks without cases |  |  |
 | Period without cases | Cwmed | Median duration in consecutive weeks without cases |  |  |
-| Incidence | Inc | Annual incidence rate (per *p* persons) OR Annual incidence per *p* population???? | p |  |
+| Incidence | Inc | Annual incidence rate per *p* population | p |  |
 
 ## Contributions
 
