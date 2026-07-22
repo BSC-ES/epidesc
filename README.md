@@ -116,6 +116,5 @@ Oswaldo Cruz Foundation (Fiocruz)
 
 [**Rachel Lowe, PhD**](https://www.bsc.es/lowe-rachel)
 <a href="https://orcid.org/0000-0003-3939-7343" style="margin-left: 15px;"><img src="https://orcid.org/sites/default/files/images/orcid_16x16.png" alt="ORCID" style="width: 16px; height: 16px;"/></a>\
-Barcelona Supercomputing Center (BSC)
-
+Barcelona Supercomputing Center (BSC)\
 Catalan Institution for Research & Advanced Studies (ICREA)
