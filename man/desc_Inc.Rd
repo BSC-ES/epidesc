@@ -14,7 +14,7 @@ and 'pop'.}
 \item{p}{Number of persons representing the scale of the incidence.}
 }
 \value{
-The computed Ap epidescriptor.
+The computed Inc epidescriptor.
 }
 \description{
 Disease incidence per 'p' persons.

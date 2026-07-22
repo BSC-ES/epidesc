@@ -7,7 +7,7 @@
 #' and 'pop'.
 #' @param p Number of persons representing the scale of the incidence.
 #'
-#' @returns The computed Ap epidescriptor.
+#' @returns The computed Inc epidescriptor.
 #' @export
 desc_Inc <- function(df, p) {
   res <- sum(df$cases) / mean(df$pop)

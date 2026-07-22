@@ -128,7 +128,7 @@ desc_year <- function(
   if (any(nchar(uniquetimes) != 6)) {
     stop(
       "Found invalid epiyearweeks in 'time': ",
-      paste(uniquetimes[nchar(uniquetimes) != 6])
+      paste(uniquetimes[nchar(uniquetimes) != 6], collapse = " ")
     )
   } else if (!all(substr(uniquetimes, 5, 6) %in% sprintf("%02d", 1:53))) {
     stop(
@@ -148,7 +148,7 @@ desc_year <- function(
     if (!all(rangeepi %in% uniquetimes)) {
       stop(
         "The time series is not regular, missing times ",
-        paste(rangeepi[!rangeepi %in% uniquetimes], collapse = "")
+        paste(rangeepi[!rangeepi %in% uniquetimes], collapse = " ")
       )
     }
   }
@@ -157,8 +157,8 @@ desc_year <- function(
   desc_names <- sapply(descriptors, `[[`, "fun")
   if (any(!desc_names %in% .descriptors_list$fun)) {
     stop(
-      "Unkown descriptors: ",
-      paste(desc_names[!desc_names %in% .descriptors_list$fun], collapse = "")
+      "Unknown descriptors: ",
+      paste(desc_names[!desc_names %in% .descriptors_list$fun], collapse = " ")
     )
   }
 
@@ -300,12 +300,32 @@ desc_year <- function(
   # 2. Descriptors ----
 
   # Split by space and epiyear
-  datasplit <- split(dataclean, ~ space + epiyear)
+  datasplit <- split(dataclean, ~ space + epiyear, drop = TRUE)
 
-  # Compute descriptors
-  res <- lapply(datasplit, .compute_descriptors, descriptors = descriptors)
-  res <- as.data.frame(do.call(rbind, res))
-  rownames(res) <- NULL
+  # Resolve descriptor functions and their arguments once
+  desc_funs <- lapply(descriptors, function(desc) {
+    list(
+      fun = match.fun(paste0("desc_", desc$fun)),
+      args = desc[names(desc) != "fun"]
+    )
+  })
+
+  # Compute descriptors: a numeric matrix (groups x descriptors)
+  valmat <- do.call(
+    rbind,
+    lapply(datasplit, .compute_descriptors, desc_funs = desc_funs)
+  )
+  colnames(valmat) <- names(descriptors)
+
+  # Recover the spatial and temporal identifiers of each group (preserving type)
+  res <- data.frame(
+    space = unlist(lapply(datasplit, function(df) df$space[1]), use.names = FALSE),
+    epiyear = unlist(lapply(datasplit, function(df) df$epiyear[1]), use.names = FALSE),
+    valmat,
+    row.names = NULL,
+    check.names = FALSE,
+    stringsAsFactors = FALSE
+  )
   names(res)[1] <- space # Recover name of the space column
 
   # 3. Return ----
@@ -317,31 +337,21 @@ desc_year <- function(
 #' @param df A data.frame consisting of 52 rows (1 year) for
 #' a single spatial unit with columns 'time' (epiyearweek), 'space', 'cases',
 #' 'epiweek' and 'epiyear'.
-#' @param descriptors A list indicating the epidescriptors to compute and their
-#' parameters. See [desc_year].
+#' @param desc_funs A list of pre-resolved descriptors, each element a list with
+#' the resolved function `fun` and its arguments `args`. See [desc_year].
 #'
-#' @returns A data.frame with the computed descriptors
+#' @returns A named numeric vector with the computed descriptors.
 #' @noRd
-.compute_descriptors <- function(df, descriptors) {
+.compute_descriptors <- function(df, desc_funs) {
   # The year is not complete or there are NAs
-  if (!nrow(df) %in% c(52, 53) || any(is.na(df[["cases"]]))) {
-    res <- as.data.frame(matrix(NA, nrow = 1, ncol = length(descriptors)))
-    names(res) <- names(descriptors)
-  } else {
-    # Compute descriptors
-    res <- lapply(descriptors, function(desc) {
-      fun <- desc$fun
-      fun <- match.fun(paste0("desc_", fun))
-      args <- desc[names(desc) != "fun"]
-      do.call(fun, c(list(df), args))
-    })
-    res <- as.data.frame(as.list(res))
-    names(res) <- names(descriptors)
+  if (!nrow(df) %in% c(52, 53) || anyNA(df[["cases"]])) {
+    return(rep(NA_real_, length(desc_funs)))
   }
 
-  # Add temporal and spatial IDs
-  IDs <- data.frame(space = df$space[1], epiyear = df$epiyear[1])
-  res <- cbind(IDs, res)
-
-  return(res)
+  # Compute descriptors
+  vapply(
+    desc_funs,
+    function(desc) as.numeric(do.call(desc$fun, c(list(df), desc$args))),
+    numeric(1)
+  )
 }

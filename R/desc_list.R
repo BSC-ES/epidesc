@@ -94,7 +94,7 @@
 
 #' List of epidescriptors and their parameters
 #'
-#' @returns A data.frame with the funes, descriptions, classes and parameters
+#' @returns A data.frame with the functions, descriptions, classes and parameters
 #' of the descriptors included in the package.
 #' @export
 #'

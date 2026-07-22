@@ -22,7 +22,7 @@ desc_Cwf <- function(df, n) {
 #' @param df A data.frame consisting of 52 rows (1 year) for a single spatial
 #' unit with columns 'time' (epiyearweek), 'cases', 'epiweek' and 'epiyear'.
 #'
-#' @returns The computed Cmax epidescriptor.
+#' @returns The computed Cwmax epidescriptor.
 #' @export
 desc_Cwmax <- function(df) {
   res <- nseq::trle_cond_stat(df$cases, b_op = "e", b = 0, stat = "max")
@@ -42,7 +42,7 @@ desc_Cwmax <- function(df) {
 #' @param df A data.frame consisting of 52 rows (1 year) for a single spatial
 #' unit with columns 'time' (epiyearweek), 'cases', 'epiweek' and 'epiyear'.
 #'
-#' @returns The computed Cmed epidescriptor.
+#' @returns The computed Cwmed epidescriptor.
 #' @export
 desc_Cwmed <- function(df) {
   res <- nseq::trle_cond_stat(df$cases, b_op = "e", b = 0, stat = "median")

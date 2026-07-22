@@ -148,7 +148,7 @@ test_that("desc_year errors on unknown descriptor name", {
   bad_desc <- list(X = list(fun = "NotADescriptor"))
   expect_error(
     desc_year(dfval, "cases", "epiyw", "spatialID", bad_desc),
-    "Unkown descriptors"
+    "Unknown descriptors"
   )
 })
 test_that("desc_year errors if required descriptor parameter is missing", {

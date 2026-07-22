@@ -83,7 +83,7 @@ desc_Isof <- function(df) {
 
 #' p
 #'
-#' @description Proportion fo weeks with at least 'x' cases.
+#' @description Proportion of weeks with at least 'x' cases.
 #'
 #' @param df A data.frame consisting of 52 rows (1 year) for a single spatial
 #' unit with columns 'time' (epiyearweek), 'cases', 'epiweek' and 'epiyear'.

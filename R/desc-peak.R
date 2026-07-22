@@ -1,6 +1,6 @@
 #' Ap
 #'
-#' @description Week where the maximum peak occurred.
+#' @description Maximum weekly case count (height of the epidemic peak).
 #'
 #' @param df A data.frame consisting of 52 rows (1 year) for a single spatial
 #' unit with columns 'time' (epiyearweek), 'cases', 'epiweek' and 'epiyear'.

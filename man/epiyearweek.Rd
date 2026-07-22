@@ -13,7 +13,7 @@ epiyearweek(date, start = "Sunday")
 'Sunday', but can be also set to 'Monday'.}
 }
 \value{
-An epiweekyear integer vector.
+A character vector with the epiyearweek in \code{"yyyyww"} format.
 }
 \description{
 Compute epiyearweek (yyyyww) indicators from dates.
