@@ -20,8 +20,8 @@ editor_options:
 The R package **epidesc** provides the tools to easily compute a series
 of epidemiological indicators to characterise different transmission
 profiles of infectious diseases. The work is based on the publication
-'How heterogeneous is the dengue transmission profile in Brazil? A study
-in six Brazilian states'
+'*How heterogeneous is the dengue transmission profile in Brazil? A
+study in six Brazilian states*'
 (<https://doi.org/10.1371/journal.pntd.0010746>) published in PLoS
 Neglected Tropical Diseases by Iasmim Ferreira de Almeida, Raquel
 Martins Lana and Cláudia Torres Codeço in 2022.
@@ -36,7 +36,8 @@ and spatiotemporal identifiers. \* The data needs to be weekly with
 dates in Date format. \* If an incidence descriptor is required, the
 population at risk also needs to be provided.
 
-To find out more, please see the package vignette (PUT THE LINK).
+To find out more, please see the package vignette (**PUT THE LINK - Is
+this available?**).
 
 ## Included descriptors
 
@@ -47,10 +48,10 @@ library("epidesc")
 knitr::kable(desc_list())
 ```
 
-| class | fun | description | param1 | param2 |
-|:--------|:--------|:------------------------------------|:--------|:--------|
-| Peak cases | Ap | Maximum cases peak |  |  |
-| Peak week | Tp | Week where the maximum peak occurred |  |  |
+| Class | Fun | Description | param1 | param2 |
+|:---------|:--------|:------------------------------------|:--------|:--------|
+| Peak | Ap | Maximum cases peak - amplitude |  |  |
+| Peak | Tp | Week where the maximum peak occurred - time |  |  |
 | Period with cases | Cnf | Frequency of periods of consecutive 'n' weeks or longer with at least 'x' cases | n | x |
 | Period with cases | Cmax | Maximum duration in consecutive weeks with at least 'x' cases | x |  |
 | Period with cases | Cmed | Median duration in consecutive weeks with at least 'x' cases | x |  |
@@ -59,11 +60,11 @@ knitr::kable(desc_list())
 | Period without cases | Cwf | Frequency of periods of consecutive weeks with at least 'n' weeks without cases. | n |  |
 | Period without cases | Cwmax | Maximum duration in consecutive weeks without cases |  |  |
 | Period without cases | Cwmed | Median duration in consecutive weeks without cases |  |  |
-| Incidence | Inc | Annual incidence per 'p' persons | p |  |
+| Incidence | Inc | Annual incidence rate (per *p* persons) OR Annual incidence per *p* population???? | p |  |
 
 ## Contributions
 
-If you woud like to contribute a new descriptor to **epidesc,** please
+If you woud like to contribute a new descriptor to `epidesc`**,** please
 open an issue with your idea or get in touch with Raquel Martins Lana
 ([raquel.lana\@bsc.es](mailto:raquel.lana@bsc.es){.email},
 [raquelmlana\@gmail.com](mailto:raquelmlana@gmail.com){.email}) or
@@ -74,7 +75,7 @@ to discuss its inclusion.
 ## Installation
 
 `epidesc` will soon be uploaded to CRAN. You can install the development
-version of epidesc as follows:
+version of `epidesc` as follows:
 
 ``` r
 pak::pak("https://github.com/BSC-ES/epidesc.git")
