@@ -1,3 +1,0 @@
-"0","dengue <- dengueRio"
-"0","dengue$yearweek <- epiyearweek(dengue$date, start = ""Sunday"")"
-"0","head(dengue)"
