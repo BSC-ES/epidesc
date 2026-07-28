@@ -1,16 +1,8 @@
----
-editor_options: 
-  markdown: 
-    wrap: 72
----
-
 # epidesc <img src="inst/figures/logo_BSC.png" align="right" width="16%"/>
 
 <!-- badges: start -->
-
 [![License](http://img.shields.io/badge/license-GPL%20%28%3E=%202%29-brightgreen.svg?style=flat)](https://www.gnu.org/licenses/old-licenses/gpl-2.0.html)
-<!--  [![R-CMD-check](https://github.com/BSC-ES/epidesc/actions/workflows/R-CMD-check.yaml/badge.svg)](https://github.com/BSC-ES/epidesc/actions/workflows/R-CMD-check.yaml) -->
-
+[![R-CMD-check](https://github.com/BSC-ES/epidesc/actions/workflows/R-CMD-check.yaml/badge.svg)](https://github.com/BSC-ES/epidesc/actions/workflows/R-CMD-check.yaml)
 <!-- badges: end -->
 
 ## Overview
@@ -36,8 +28,7 @@ and spatiotemporal identifiers. \* The data needs to be weekly with
 dates in Date format. \* If an incidence descriptor is required, the
 population at risk also needs to be provided.
 
-To find out more, please see the package vignette (**PUT THE LINK - Is
-this available?**).
+To find out more, please see the package vignette by typing `vignette("epidesc")`.
 
 ## Included descriptors
 
@@ -48,34 +39,39 @@ library("epidesc")
 knitr::kable(desc_list())
 ```
 
-| Class | Fun | Description | param1 | param2 |
-|:---------|:--------|:------------------------------------|:--------|:--------|
-| Peak | Ap | Maximum cases peak - amplitude |  |  |
-| Peak | Tp | Week where the maximum peak occurred - time |  |  |
-| Period with cases | Cnf | Frequency of periods of consecutive 'n' weeks or longer with at least 'x' cases | n | x |
-| Period with cases | Cmax | Maximum duration in consecutive weeks with at least 'x' cases | x |  |
-| Period with cases | Cmed | Median duration in consecutive weeks with at least 'x' cases | x |  |
-| Period with cases | Isof | Number of weeks with isolated cases |  |  |
-| Period with cases | p | Proportion of weeks with at least 'x' cases | x |  |
-| Period without cases | Cwf | Frequency of periods of consecutive weeks with at least 'n' weeks without cases. | n |  |
-| Period without cases | Cwmax | Maximum duration in consecutive weeks without cases |  |  |
-| Period without cases | Cwmed | Median duration in consecutive weeks without cases |  |  |
-| Incidence | Inc | Annual incidence rate per *p* population | p |  |
+|class                |fun   |description                                                                      |param1 |param2 |
+|:--------------------|:-----|:--------------------------------------------------------------------------------|:------|:------|
+|Peak                 |Ap    |Maximum cases peak - amplitude                                                   |       |       |
+|Peak                 |Tp    |Week where the maximum peak occurred - time                                      |       |       |
+|Period with cases    |Cnf   |Frequency of periods of consecutive 'n' weeks or longer with at least 'x' cases  |n      |x      |
+|Period with cases    |Cmax  |Maximum duration in consecutive weeks with at least 'x' cases                    |x      |       |
+|Period with cases    |Cmed  |Median duration in consecutive weeks with at least 'x' cases                     |x      |       |
+|Period with cases    |Isof  |Number of weeks with isolated cases                                              |       |       |
+|Period with cases    |p     |Proportion of weeks with at least 'x' cases                                      |x      |       |
+|Period without cases |Cwf   |Frequency of periods of consecutive weeks with at least 'n' weeks without cases. |n      |       |
+|Period without cases |Cwmax |Maximum duration in consecutive weeks without cases                              |       |       |
+|Period without cases |Cwmed |Median duration in consecutive weeks without cases                               |       |       |
+|Incidence            |Inc   |Annual incidence rate per 'p' population                                         |p      |       |
 
 ## Contributions
 
-If you woud like to contribute a new descriptor to `epidesc`**,** please
+If you woud like to contribute a new descriptor to `epidesc`, please
 open an issue with your idea or get in touch with Raquel Martins Lana
-([raquel.lana\@bsc.es](mailto:raquel.lana@bsc.es){.email},
-[raquelmlana\@gmail.com](mailto:raquelmlana@gmail.com){.email}) or
+([raquel.lana\@bsc.es](mailto:raquel.lana@bsc.es),
+[raquelmlana\@gmail.com](mailto:raquelmlana@gmail.com)) or
 Carles Milà
-([carles.milagarcia\@bsc.es](mailto:carles.milagarcia@bsc.es){.email})
+([carles.milagarcia\@bsc.es](mailto:carles.milagarcia@bsc.es))
 to discuss its inclusion.
 
 ## Installation
 
-`epidesc` will soon be uploaded to CRAN. You can install the development
-version of `epidesc` as follows:
+`epidesc` is available on CRAN and can be installed as follows:
+
+``` r
+install.packages("epidesc")
+```
+
+You can install the development version of `epidesc` as follows:
 
 ``` r
 pak::pak("https://github.com/BSC-ES/epidesc.git")
