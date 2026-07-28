@@ -23,11 +23,11 @@
 
 .descriptors_list <- .rbind_fill_base(
   # Peak indicators
-  data.frame(fun = "Ap", class = "Peak", description = "Maximum cases peak"),
+  data.frame(fun = "Ap", class = "Peak", description = "Maximum cases peak - amplitude"),
   data.frame(
     fun = "Tp",
     class = "Peak",
-    description = "Week where the maximum peak occurred"
+    description = "Week where the maximum peak occurred - time"
   ),
 
   # Period with cases
@@ -90,7 +90,7 @@
   data.frame(
     fun = "Inc",
     class = "Incidence",
-    description = "Annual incidence per 'p' persons",
+    description = "Annual incidence rate per 'p' population",
     param1 = "p"
   )
 )
