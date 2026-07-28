@@ -40,7 +40,7 @@ head(dengueRio)
 **epidesc** has a few simple data requirements:
 
 1. The input must be a `data.frame` containing the case counts and the corresponding spatial and temporal identifiers with no missing values. 
-In the sample dataset, these are the columns `cases` (number of dengue cases), `date` (temporal identifier), and `regional_geocode` (spatial identifier).
+In the sample dataset, these are the columns `cases` (number of dengue cases), `date` (temporal identifier), and `muni_code` (spatial identifier).
 2. The data must be aggregated at the weekly level, with dates stored in `Date` format.
 3. Each time series must be regular, with a 7-day interval between consecutive observations. If no cases are reported for a given spatial unit in a particular 
 epidemiological week, that observation must still be included in the dataset with the case count set to zero.
@@ -50,14 +50,8 @@ If any of these requirements aren't met, the package function will throw error m
 
 ## Formatting dates
 
-The only required pre-processing step is to convert the dates into epidemiological yearweek format: yyyyww. We can easily do so by using the function `epiyearweek` as follows. 
-
-Note that `epiyearweek` lets you choose whether epidemiological weeks start on a Sunday or a Monday via the `start` argument. 
-
-## Formatting dates
-
 The only required pre-processing step is to convert the dates into epidemiological *yearweek* format: yyyyww. We can easily do so by using the function `epiyearweek` as follows.
-Note that Brazilian epidemiological weeks start on a Sunday:
+Note that `epiyearweek` lets you choose whether epidemiological weeks start on a Sunday or a Monday via the `start` argument; Brazilian epidemiological weeks start on a Sunday:
 
 ```{r}
 dengue <- dengueRio

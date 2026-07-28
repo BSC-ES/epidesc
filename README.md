@@ -18,15 +18,18 @@ study in six Brazilian states*'
 Neglected Tropical Diseases by Iasmim Ferreira de Almeida, Raquel
 Martins Lana and Cláudia Torres Codeço in 2022.
 
-The **epidesc** pipeline to compute the indicators is as follows: \*
-Formatting dates in *epiyearweek* format. \* Choosing descriptors and
-its parameters from the catalogue. \* Compute descriptors.
+The **epidesc** pipeline to compute the indicators is as follows:
+
+* Formatting dates in *epiyearweek* format. 
+* Choosing descriptors and its parameters from the catalogue.
+* Compute descriptors.
 
 Before computing the descriptors, ensure the data meet the following
-requirements: \* The input data has to be a data.frame with the cases
-and spatiotemporal identifiers. \* The data needs to be weekly with
-dates in Date format. \* If an incidence descriptor is required, the
-population at risk also needs to be provided.
+requirements: 
+
+* The input data has to be a data.frame with the cases and spatiotemporal identifiers.
+* The data needs to be weekly with dates in Date format. 
+* If an incidence descriptor is required, the population at risk also needs to be provided.
 
 To find out more, please see the package vignette by typing `vignette("epidesc")`.
 

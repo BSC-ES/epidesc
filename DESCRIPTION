@@ -28,7 +28,7 @@ Description: Provides tools to easily compute a series of epidemiological
     package is based on the publication How heterogeneous is the dengue
     transmission profile in Brazil? A study in six Brazilian states
     <doi:10.1371/journal.pntd.0010746>.
-License: GPL (>= 3)
+License: GPL (>= 2)
 URL: https://github.com/BSC-ES/epidesc
 BugReports: https://github.com/BSC-ES/epidesc/issues
 Depends: 

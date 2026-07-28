@@ -1,6 +1,6 @@
 #' Ap
 #'
-#' @description Week where the maximum peak occurred.
+#' @description Maximum cases peak - amplitude.
 #'
 #' @inheritParams desc_Cnf
 #'

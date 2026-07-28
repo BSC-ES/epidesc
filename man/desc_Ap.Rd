@@ -14,7 +14,7 @@ unit with columns 'time' (epiyearweek), 'cases', 'epiweek' and 'epiyear'.}
 The computed Ap epidescriptor.
 }
 \description{
-Week where the maximum peak occurred.
+Maximum cases peak - amplitude.
 }
 \examples{
 desc_Ap(dengueRio)

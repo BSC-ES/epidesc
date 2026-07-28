@@ -26,8 +26,8 @@ test_that("Cmed works", {
 
 test_that("Isof works", {
   expect_equal(desc_Isof(data.frame(cases = c(0, 1, 0))), 1)
-  expect_equal(desc_Isof(data.frame(cases = c(1, 0, 0))), 1) # Verify
-  expect_equal(desc_Isof(data.frame(cases = c(0, 1, 0))), 1)
+  expect_equal(desc_Isof(data.frame(cases = c(1, 0, 0))), 1)
+  expect_equal(desc_Isof(data.frame(cases = c(0, 0, 1))), 1)
   expect_equal(desc_Isof(data.frame(cases = c(4, 1, 6))), 0)
 })
 

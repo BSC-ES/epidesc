@@ -128,7 +128,7 @@ desc_year <- function(
   if (any(nchar(uniquetimes) != 6)) {
     stop(
       "Found invalid epiyearweeks in 'time': ",
-      paste(uniquetimes[nchar(uniquetimes) != 6])
+      paste(uniquetimes[nchar(uniquetimes) != 6], collapse = " ")
     )
   } else if (!all(substr(uniquetimes, 5, 6) %in% sprintf("%02d", 1:53))) {
     stop(

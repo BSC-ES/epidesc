@@ -11,6 +11,6 @@
 #'   \item{cases}{Number of dengue cases}
 #'   \item{pop}{Population}
 #' }
-#' @source <doi:doi.org/10.1371/journal.pntd.0010746>
+#' @source <https://doi.org/10.1371/journal.pntd.0010746>
 #' @usage data(dengueRio)
 "dengueRio"

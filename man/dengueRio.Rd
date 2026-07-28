@@ -17,7 +17,7 @@ A data frame with 28,796 rows and 4 columns:
 }
 }
 \source{
-\url{doi:doi.org/10.1371/journal.pntd.0010746}
+\url{https://doi.org/10.1371/journal.pntd.0010746}
 }
 \usage{
 data(dengueRio)

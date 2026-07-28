@@ -4,7 +4,7 @@
 #' @param start First day of the epiweek. Defaults to
 #' 'Sunday', but can be also set to 'Monday'.
 #'
-#' @returns An epiweekyear integer vector.
+#' @returns An epiweekyear character vector.
 #' @export
 #'
 #' @details The function uses lubridate's epi/iso week/year functions to
