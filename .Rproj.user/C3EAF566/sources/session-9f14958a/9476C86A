@@ -1,0 +1,28 @@
+{
+    "id": "9476C86A",
+    "path": "~/Documents/BSC/Fundings/MSCA/Development/Analysis/epidesc/vignettes/epidesc.Rmd",
+    "project_path": "vignettes/epidesc.Rmd",
+    "type": "r_markdown",
+    "hash": "0",
+    "contents": "",
+    "dirty": false,
+    "created": 1784745328559.0,
+    "source_on_save": false,
+    "relative_order": 2,
+    "properties": {
+        "source_window_id": "",
+        "Source": "Source",
+        "last_setup_crc32": "9f14958afd5dcac3",
+        "cursorPosition": "104,0",
+        "scrollLine": "0",
+        "chunk_output_type": "console"
+    },
+    "folds": "",
+    "lastKnownWriteTime": 1784745372,
+    "encoding": "UTF-8",
+    "collab_server": "",
+    "source_window": "",
+    "last_content_update": 1784745372,
+    "read_only": false,
+    "read_only_alternatives": []
+}
