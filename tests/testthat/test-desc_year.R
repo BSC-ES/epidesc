@@ -323,4 +323,33 @@ test_that("collapse53 acts as expected", {
   expect_identical(sum(is.na(sweek40$Inc)), 2L)
 })
 
+test_that("epiyear is formatted according to sweek", {
+  eyw <- c(as.character(1:53), as.character(1:52))
+  eyw <- ifelse(nchar(eyw) == 1, paste0("0", eyw), eyw)
+  eyw <- paste0(c(rep("2025", 53), rep("2026", 52)), eyw)
+  descInc <- list("Inc" = list(fun = "Inc", p = 1))
+  df53 <- data.frame(
+    time = eyw,
+    space = "A",
+    cases = c(rep(1, 52), 1000, rep(1, 52)),
+    pop = 1
+  )
+
+  # sweek = 1: plain year, as a character column
+  sweek1 <- desc_year(df53, "cases", "time", "space", descInc, pop = "pop")
+  expect_identical(sweek1$epiyear, c("2025", "2026"))
+
+  # sweek != 1: "start/end" season format
+  sweek40 <- desc_year(
+    df53,
+    "cases",
+    "time",
+    "space",
+    descInc,
+    pop = "pop",
+    sweek = 40
+  )
+  expect_identical(sweek40$epiyear, c("2024/2025", "2025/2026", "2026/2027"))
+})
+
 

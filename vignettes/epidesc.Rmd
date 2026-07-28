@@ -125,12 +125,12 @@ res <- desc_year(
 Our descriptors have been computed! Let's have a look at the results of epidemiological year 2020 (from W41-2020 to W40-2021):
 
 ```{r}
-head(res[res$epiyear == 2020, ])
+head(res[res$epiyear == "2020/2021", ])
 ```
 
-Note that for epiyears where not all weeks are available or there are missing cases, the result will be NA, e.g. at the borders
+Note that for epiyears where not all weeks are available or there are missing cases, the result will be NA, e.g. at the start and end
 of the time series where the epidemiological year is not complete:
 
 ```{r}
-head(res[res$epiyear == 2022, ])
+head(res[res$epiyear == "2022/2023", ])
 ```

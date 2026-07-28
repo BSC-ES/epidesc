@@ -92,6 +92,12 @@ desc_year <- function(
     stop("No column of the data matches the 'cases' argument.")
   } else if (!is.numeric(data[[cases]])) {
     stop("'cases' column should be of type numeric.")
+  } else if (anyNA(data[[cases]])) {
+    warning(
+      "Some NAs in the 'cases' column have been found. ",
+      "These will result in missing descriptors for the ",
+      "corresponding epidemiological years."
+    )
   }
 
   # time
@@ -293,6 +299,11 @@ desc_year <- function(
     dataclean$epiyear - 1,
     dataclean$epiyear
   )
+  if (sweek != 1) {
+    dataclean$epiyear <- paste0(dataclean$epiyear, "/", dataclean$epiyear + 1)
+  } else {
+    dataclean$epiyear <- as.character(dataclean$epiyear)
+  }
 
   # Order
   dataclean <- dataclean[order(dataclean$space, dataclean$time), ]
