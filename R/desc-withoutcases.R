@@ -5,8 +5,17 @@
 #'
 #' @inheritParams desc_Cnf
 #'
+#' @details This function is designed to be called by [desc_year] on data
+#' that has already been split into a single epidemiological year for a
+#' single spatial unit. Using it directly outside of that context is not
+#' recommended, as no input validation is performed.
+#'
 #' @examples
-#' desc_Cwf(dengueRio, 3)
+#' # Single spatial unit and epidemiological year
+#' oneyear <- dengueRio[dengueRio$muni_code == 330455, ]
+#' oneyear$time <- epiyearweek(oneyear$date)
+#' oneyear <- oneyear[substr(oneyear$time, 1, 4) == "2019", ]
+#' desc_Cwf(oneyear, 3)
 #' @returns The computed Cwf epidescriptor.
 #' @export
 desc_Cwf <- function(df, n) {
@@ -21,8 +30,17 @@ desc_Cwf <- function(df, n) {
 #'
 #' @inheritParams desc_Cnf
 #'
+#' @details This function is designed to be called by [desc_year] on data
+#' that has already been split into a single epidemiological year for a
+#' single spatial unit. Using it directly outside of that context is not
+#' recommended, as no input validation is performed.
+#'
 #' @examples
-#' desc_Cwmax(dengueRio)
+#' # Single spatial unit and epidemiological year
+#' oneyear <- dengueRio[dengueRio$muni_code == 330455, ]
+#' oneyear$time <- epiyearweek(oneyear$date)
+#' oneyear <- oneyear[substr(oneyear$time, 1, 4) == "2019", ]
+#' desc_Cwmax(oneyear)
 #' @returns The computed Cwmax epidescriptor.
 #' @export
 desc_Cwmax <- function(df) {
@@ -42,8 +60,17 @@ desc_Cwmax <- function(df) {
 #'
 #' @inheritParams desc_Cnf
 #'
+#' @details This function is designed to be called by [desc_year] on data
+#' that has already been split into a single epidemiological year for a
+#' single spatial unit. Using it directly outside of that context is not
+#' recommended, as no input validation is performed.
+#'
 #' @examples
-#' desc_Cwmed(dengueRio)
+#' # Single spatial unit and epidemiological year
+#' oneyear <- dengueRio[dengueRio$muni_code == 330455, ]
+#' oneyear$time <- epiyearweek(oneyear$date)
+#' oneyear <- oneyear[substr(oneyear$time, 1, 4) == "2019", ]
+#' desc_Cwmed(oneyear)
 #' @returns The computed Cwmed epidescriptor.
 #' @export
 desc_Cwmed <- function(df) {

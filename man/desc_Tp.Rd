@@ -7,8 +7,7 @@
 desc_Tp(df)
 }
 \arguments{
-\item{df}{A data.frame consisting of 52 rows (1 year) for a single spatial
-unit with columns 'time' (epiyearweek), 'cases', 'epiweek' and 'epiyear'.}
+\item{df}{A data.frame with numeric 'cases' and 'epiweek' columns.}
 }
 \value{
 The computed Tp epidescriptor.
@@ -16,6 +15,17 @@ The computed Tp epidescriptor.
 \description{
 Week where the maximum peak occurred.
 }
+\details{
+This function is designed to be called by \link{desc_year} on data
+that has already been split into a single epidemiological year for a
+single spatial unit. Using it directly outside of that context is not
+recommended, as no input validation is performed.
+}
 \examples{
-desc_Tp(dengueRio)
+# Single spatial unit and epidemiological year
+oneyear <- dengueRio[dengueRio$muni_code == 330455, ]
+oneyear$time <- epiyearweek(oneyear$date)
+oneyear <- oneyear[substr(oneyear$time, 1, 4) == "2019", ]
+oneyear$epiweek <- as.numeric(substr(oneyear$time, 5, 6))
+desc_Tp(oneyear)
 }

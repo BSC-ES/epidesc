@@ -7,9 +7,7 @@
 desc_Inc(df, p)
 }
 \arguments{
-\item{df}{A data.frame consisting of 52 rows (1 year) for a single spatial
-unit with columns 'time' (epiyearweek), 'cases', 'epiweek', 'epiyear',
-and 'pop'.}
+\item{df}{A data.frame with numeric 'cases' and 'pop' columns.}
 
 \item{p}{Number of persons representing the scale of the incidence.}
 }
@@ -19,6 +17,16 @@ The computed Inc epidescriptor.
 \description{
 Disease incidence per 'p' persons.
 }
+\details{
+This function is designed to be called by \link{desc_year} on data
+that has already been split into a single epidemiological year for a
+single spatial unit. Using it directly outside of that context is not
+recommended, as no input validation is performed.
+}
 \examples{
-desc_Inc(dengueRio, 100000)
+# Single spatial unit and epidemiological year
+oneyear <- dengueRio[dengueRio$muni_code == 330455, ]
+oneyear$time <- epiyearweek(oneyear$date)
+oneyear <- oneyear[substr(oneyear$time, 1, 4) == "2019", ]
+desc_Inc(oneyear, 100000)
 }

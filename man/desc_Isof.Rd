@@ -7,8 +7,7 @@
 desc_Isof(df)
 }
 \arguments{
-\item{df}{A data.frame consisting of 52 rows (1 year) for a single spatial
-unit with columns 'time' (epiyearweek), 'cases', 'epiweek' and 'epiyear'.}
+\item{df}{A data.frame with a numeric 'cases' column.}
 }
 \value{
 The computed Isof epidescriptor.
@@ -17,6 +16,16 @@ The computed Isof epidescriptor.
 Number of weeks with isolated cases, i.e. weeks with 0 cases
 both in the previous and following week.
 }
+\details{
+This function is designed to be called by \link{desc_year} on data
+that has already been split into a single epidemiological year for a
+single spatial unit. Using it directly outside of that context is not
+recommended, as no input validation is performed.
+}
 \examples{
-desc_Isof(dengueRio)
+# Single spatial unit and epidemiological year
+oneyear <- dengueRio[dengueRio$muni_code == 330455, ]
+oneyear$time <- epiyearweek(oneyear$date)
+oneyear <- oneyear[substr(oneyear$time, 1, 4) == "2019", ]
+desc_Isof(oneyear)
 }
