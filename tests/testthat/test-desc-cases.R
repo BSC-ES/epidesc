@@ -11,8 +11,8 @@ test_that("Cmax works", {
   testdf <- data.frame(cases = testnum)
   expect_equal(desc_Cmax(testdf, 10), 2)
   expect_equal(desc_Cmax(testdf, 12), 1)
-  expect_equal(desc_Cmax(testdf, 1), length(testnum))
-  expect_equal(desc_Cmax(testdf, 100), 0)
+  expect_identical(desc_Cmax(testdf, 1), length(testnum))
+  expect_identical(desc_Cmax(testdf, 100), 0)
 })
 
 test_that("Cmed works", {
@@ -20,14 +20,14 @@ test_that("Cmed works", {
   testdf <- data.frame(cases = testnum)
   expect_equal(desc_Cmed(testdf, 7), 2)
   expect_equal(desc_Cmed(testdf, 4), 3)
-  expect_equal(desc_Cmed(testdf, 1), length(testnum))
-  expect_equal(desc_Cmed(testdf, 100), 0)
+  expect_identical(desc_Cmed(testdf, 1), length(testnum))
+  expect_identical(desc_Cmed(testdf, 100), 0)
 })
 
 test_that("Isof works", {
   expect_equal(desc_Isof(data.frame(cases = c(0, 1, 0))), 1)
-  expect_equal(desc_Isof(data.frame(cases = c(1, 0, 0))), 1) # Verify
-  expect_equal(desc_Isof(data.frame(cases = c(0, 1, 0))), 1)
+  expect_equal(desc_Isof(data.frame(cases = c(1, 0, 0))), 1)
+  expect_equal(desc_Isof(data.frame(cases = c(0, 0, 1))), 1)
   expect_equal(desc_Isof(data.frame(cases = c(4, 1, 6))), 0)
 })
 

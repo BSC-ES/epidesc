@@ -28,8 +28,8 @@ type character.}
 \item{space}{Character. Name of the variable in \code{data} that  contains the
 spatial identifier for which a case count time series is available.}
 
-\item{descriptors}{A named list with the descriptor fun and their arguments.
-See details.}
+\item{descriptors}{A named list with the descriptor function and their
+arguments. See details.}
 
 \item{pop}{Character. Name of the variable in \code{data} that contains the
 population counts. Only required if the descriptor 'Inc' (incidence) is used.}

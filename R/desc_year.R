@@ -10,8 +10,8 @@
 #' type character.
 #' @param space Character. Name of the variable in `data` that  contains the
 #' spatial identifier for which a case count time series is available.
-#' @param descriptors A named list with the descriptor fun and their arguments.
-#' See details.
+#' @param descriptors A named list with the descriptor function and their
+#' arguments. See details.
 #' @param pop Character. Name of the variable in `data` that contains the
 #' population counts. Only required if the descriptor 'Inc' (incidence) is used.
 #' @param sweek Integer between 1-52 that determines the first week of
@@ -99,14 +99,14 @@ desc_year <- function(
     stop("No column of the data matches the 'time' argument.")
   } else if (!is.character(data[[time]])) {
     stop("'time' column should be of type character.")
-  } else if (any(is.na(data[[time]]))) {
+  } else if (anyNA(data[[time]])) {
     stop("No missing values are allowed in the 'time' column.")
   }
 
   # space
   if (is.null(data[[space]])) {
     stop("No column of the data matches the 'space' argument.")
-  } else if (any(is.na(data[[space]]))) {
+  } else if (anyNA(data[[space]])) {
     stop("No missing values are allowed in the 'space' column.")
   }
 
@@ -118,7 +118,7 @@ desc_year <- function(
   }
 
   # duplicated time points
-  duppl <- tapply(data[[space]], data[[time]], function(x) any(duplicated(x)))
+  duppl <- tapply(data[[space]], data[[time]], anyDuplicated)
   if (any(duppl)) {
     stop("Duplicated time points have been detected within spatial units.")
   }
@@ -155,7 +155,7 @@ desc_year <- function(
 
   # descriptors
   desc_names <- sapply(descriptors, `[[`, "fun")
-  if (any(!desc_names %in% .descriptors_list$fun)) {
+  if (!all(desc_names %in% .descriptors_list$fun)) {
     stop(
       "Unknown descriptors: ",
       paste(desc_names[!desc_names %in% .descriptors_list$fun], collapse = " ")
@@ -169,15 +169,15 @@ desc_year <- function(
     ]
     if (!is.na(p1)) {
       if (!p1 %in% names(descriptors[[d]])) {
-        stop(paste0(
+        stop(
           "Parameter ",
           p1,
           " not supplied for ",
           names(descriptors[d]),
           "."
-        ))
+        )
       } else if (!is.numeric(descriptors[[d]][[p1]])) {
-        stop(paste0("Parameter ", p1, " must be numeric"))
+        stop("Parameter ", p1, " must be numeric")
       }
     }
     p2 <- .descriptors_list$param2[
@@ -185,15 +185,15 @@ desc_year <- function(
     ]
     if (!is.na(p2)) {
       if (!p2 %in% names(descriptors[[d]])) {
-        stop(paste0(
+        stop(
           "Parameter ",
           p2,
           " not supplied for ",
           names(descriptors[d]),
           "."
-        ))
+        )
       } else if (!is.numeric(descriptors[[d]][[p2]])) {
-        stop(paste0("Parameter ", p2, " must be numeric"))
+        stop("Parameter ", p2, " must be numeric")
       }
     }
   }
@@ -204,7 +204,7 @@ desc_year <- function(
       stop("The argument 'pop' is required to compute incidence.")
     } else if (is.null(data[[pop]])) {
       stop("No column of the data matches the 'pop' argument.")
-    } else if (any(is.na(data[[pop]]))) {
+    } else if (anyNA(data[[pop]])) {
       stop("No missing values are allowed in the 'pop' column.")
     }
   }
@@ -329,7 +329,7 @@ desc_year <- function(
   names(res)[1] <- space # Recover name of the space column
 
   # 3. Return ----
-  return(res)
+  res
 }
 
 #' Helper to fit the descriptor functions
@@ -351,7 +351,7 @@ desc_year <- function(
   # Compute descriptors
   vapply(
     desc_funs,
-    function(desc) as.numeric(do.call(desc$fun, c(list(df), desc$args))),
+    function(desc) do.call(desc$fun, c(list(df), desc$args)),
     numeric(1)
   )
 }

@@ -16,3 +16,6 @@ The computed Cwmed epidescriptor.
 \description{
 Median duration in consecutive weeks without cases.
 }
+\examples{
+desc_Cwmed(dengueRio)
+}

@@ -16,6 +16,6 @@ test_that("Cwmax works", {
 test_that("Cwmed works", {
   testnum <- c(1, 0, 1, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0, 0, 1)
   testdf <- data.frame(cases = testnum)
-  expect_equal(desc_Cwmed(testdf), 2.5)
-  expect_equal(desc_Cwmed(data.frame(cases = rep(1, 4))), 0)
+  expect_identical(desc_Cwmed(testdf), 2.5)
+  expect_identical(desc_Cwmed(data.frame(cases = rep(1, 4))), 0)
 })

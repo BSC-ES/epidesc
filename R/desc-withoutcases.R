@@ -3,25 +3,26 @@
 #' @description Frequency of periods of consecutive weeks with at least 'n'
 #' weeks without cases.
 #'
-#' @param df A data.frame consisting of 52 rows (1 year) for a single spatial
-#' unit with columns 'time' (epiyearweek), 'cases', 'epiweek' and 'epiyear'.
-#' @param n Number of consecutive weeks.
+#' @inheritParams desc_Cnf
 #'
+#' @examples
+#' desc_Cwf(dengueRio, 3)
 #' @returns The computed Cwf epidescriptor.
 #' @export
 desc_Cwf <- function(df, n) {
   res <- nseq::trle_cond(df$cases, a_op = "gte", a = n, b_op = "e", b = 0)
 
-  return(res)
+  res
 }
 
 #' Cwmax
 #'
 #' @description Maximum duration in consecutive weeks without cases.
 #'
-#' @param df A data.frame consisting of 52 rows (1 year) for a single spatial
-#' unit with columns 'time' (epiyearweek), 'cases', 'epiweek' and 'epiyear'.
+#' @inheritParams desc_Cnf
 #'
+#' @examples
+#' desc_Cwmax(dengueRio)
 #' @returns The computed Cwmax epidescriptor.
 #' @export
 desc_Cwmax <- function(df) {
@@ -32,16 +33,17 @@ desc_Cwmax <- function(df) {
     res <- 0
   }
 
-  return(res)
+  res
 }
 
 #' Cwmed
 #'
 #' @description Median duration in consecutive weeks without cases.
 #'
-#' @param df A data.frame consisting of 52 rows (1 year) for a single spatial
-#' unit with columns 'time' (epiyearweek), 'cases', 'epiweek' and 'epiyear'.
+#' @inheritParams desc_Cnf
 #'
+#' @examples
+#' desc_Cwmed(dengueRio)
 #' @returns The computed Cwmed epidescriptor.
 #' @export
 desc_Cwmed <- function(df) {
@@ -52,5 +54,5 @@ desc_Cwmed <- function(df) {
     res <- 0
   }
 
-  return(res)
+  res
 }

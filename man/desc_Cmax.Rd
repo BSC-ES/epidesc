@@ -18,3 +18,6 @@ The computed Cmax epidescriptor.
 \description{
 Maximum duration in consecutive weeks with at least 'x' cases.
 }
+\examples{
+desc_Cmax(dengueRio, 50)
+}

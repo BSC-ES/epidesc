@@ -4,7 +4,7 @@
 #' @param start First day of the epiweek. Defaults to
 #' 'Sunday', but can be also set to 'Monday'.
 #'
-#' @returns A character vector with the epiyearweek in `"yyyyww"` format.
+#' @returns An epiweekyear character vector.
 #' @export
 #'
 #' @details The function uses lubridate's epi/iso week/year functions to
@@ -20,7 +20,7 @@ epiyearweek <- function(date, start = "Sunday") {
   # Input checks: date
   if (!inherits(date, "Date")) {
     stop("'date' must be a vector of class 'Date'.")
-  } else if (any(is.na(date))) {
+  } else if (anyNA(date)) {
     stop("'date' cannot have any missing entries.")
   }
 
@@ -43,5 +43,5 @@ epiyearweek <- function(date, start = "Sunday") {
   }
 
   # 2. Return ----
-  return(epidate)
+  epidate
 }
