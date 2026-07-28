@@ -319,8 +319,14 @@ desc_year <- function(
 
   # Recover the spatial and temporal identifiers of each group (preserving type)
   res <- data.frame(
-    space = unlist(lapply(datasplit, function(df) df$space[1]), use.names = FALSE),
-    epiyear = unlist(lapply(datasplit, function(df) df$epiyear[1]), use.names = FALSE),
+    space = unlist(
+      lapply(datasplit, function(df) df$space[1]),
+      use.names = FALSE
+    ),
+    epiyear = unlist(
+      lapply(datasplit, function(df) df$epiyear[1]),
+      use.names = FALSE
+    ),
     valmat,
     row.names = NULL,
     check.names = FALSE,
