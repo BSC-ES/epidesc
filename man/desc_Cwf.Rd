@@ -19,3 +19,6 @@ The computed Cwf epidescriptor.
 Frequency of periods of consecutive weeks with at least 'n'
 weeks without cases.
 }
+\examples{
+desc_Cwf(dengueRio, 3)
+}

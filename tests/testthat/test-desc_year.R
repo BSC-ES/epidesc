@@ -158,11 +158,25 @@ test_that("desc_year errors if required descriptor parameter is missing", {
     "Parameter n not supplied"
   )
 })
+test_that("desc_year errors if 2nd required descriptor parameter is missing", {
+  bad_desc <- list(X = list(fun = "Cnf", n = 3))
+  expect_error(
+    desc_year(dfval, "cases", "epiyw", "spatialID", bad_desc),
+    "Parameter x not supplied"
+  )
+})
 test_that("desc_year errors if descriptor parameter is non-numeric", {
   bad_desc <- list(X = list(fun = "Cnf", n = "two"))
   expect_error(
     desc_year(dfval, "cases", "epiyw", "spatialID", bad_desc),
-    "must be numeric"
+    "Parameter n must be numeric"
+  )
+})
+test_that("desc_year errors if 2nd descriptor parameter is non-numeric", {
+  bad_desc <- list(X = list(fun = "Cnf", n = 3, x = "five"))
+  expect_error(
+    desc_year(dfval, "cases", "epiyw", "spatialID", bad_desc),
+    "Parameter x must be numeric"
   )
 })
 
@@ -308,3 +322,5 @@ test_that("collapse53 acts as expected", {
   )
   expect_identical(sum(is.na(sweek40$Inc)), 2L)
 })
+
+

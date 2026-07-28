@@ -17,3 +17,6 @@ The computed Isof epidescriptor.
 Number of weeks with isolated cases, i.e. weeks with 0 cases
 both in the previous and following week.
 }
+\examples{
+desc_Isof(dengueRio)
+}

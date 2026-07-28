@@ -16,3 +16,6 @@ The computed Cwmax epidescriptor.
 \description{
 Maximum duration in consecutive weeks without cases.
 }
+\examples{
+desc_Cwmax(dengueRio)
+}

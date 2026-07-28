@@ -18,3 +18,6 @@ The computed p epidescriptor.
 \description{
 Proportion of weeks with at least 'x' cases.
 }
+\examples{
+desc_p(dengueRio, 50)
+}

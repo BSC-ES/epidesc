@@ -19,3 +19,6 @@ The computed Inc epidescriptor.
 \description{
 Disease incidence per 'p' persons.
 }
+\examples{
+desc_Inc(dengueRio, 100000)
+}

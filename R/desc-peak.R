@@ -2,28 +2,30 @@
 #'
 #' @description Maximum weekly case count (height of the epidemic peak).
 #'
-#' @param df A data.frame consisting of 52 rows (1 year) for a single spatial
-#' unit with columns 'time' (epiyearweek), 'cases', 'epiweek' and 'epiyear'.
+#' @inheritParams desc_Cnf
 #'
+#' @examples
+#' desc_Ap(dengueRio)
 #' @returns The computed Ap epidescriptor.
 #' @export
 desc_Ap <- function(df) {
   res <- max(df$cases)
 
-  return(res)
+  res
 }
 
 #' Tp
 #'
 #' @description Week where the maximum peak occurred.
 #'
-#' @param df A data.frame consisting of 52 rows (1 year) for a single spatial
-#' unit with columns 'time' (epiyearweek), 'cases', 'epiweek' and 'epiyear'.
+#' @inheritParams desc_Cnf
 #'
+#' @examples
+#' desc_Tp(dengueRio)
 #' @returns The computed Tp epidescriptor.
 #' @export
 desc_Tp <- function(df) {
   res <- df$epiweek[which.max(df$cases)]
 
-  return(res)
+  res
 }

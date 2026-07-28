@@ -11,8 +11,8 @@ Provides tools to easily compute a series of epidemiological indicators to chara
 \seealso{
 Useful links:
 \itemize{
-  \item \url{https://earth.bsc.es/gitlab/ghr/epidesc}
-  \item Report bugs at \url{https://earth.bsc.es/gitlab/ghr/epidesc/-/issues}
+  \item \url{https://github.com/BSC-ES/epidesc}
+  \item Report bugs at \url{https://github.com/BSC-ES/epidesc/issues}
 }
 
 }

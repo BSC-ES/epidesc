@@ -13,6 +13,7 @@ test_that("epiyearweek captures wrong inputs", {
 test_that("epiyearweek with different start days", {
   # 2015-01-01 is a Thursday so it should be week 1 if start day
   # is Monday and week 53 if Sunday
-  expect_equal(epiyearweek(as.Date("2015-01-01")), "201453")
-  expect_equal(epiyearweek(as.Date("2015-01-01"), start = "Monday"), "201501")
+  expect_identical(epiyearweek(as.Date("2015-01-01")), "201453")
+  expect_identical(epiyearweek(as.Date("2015-01-01"), start = "Monday"), "201501")
 })
+

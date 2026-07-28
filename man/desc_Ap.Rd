@@ -16,3 +16,6 @@ The computed Ap epidescriptor.
 \description{
 Maximum weekly case count (height of the epidemic peak).
 }
+\examples{
+desc_Ap(dengueRio)
+}

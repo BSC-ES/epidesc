@@ -8,3 +8,4 @@
 * Provides `desc_list()` with the catalogue of available descriptors and
   `desc_year()` to compute them per spatial unit and epidemiological year.
 * Includes the `dengueRio` example dataset.
+* Initial CRAN submission.
