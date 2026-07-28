@@ -6,7 +6,7 @@
 #' @param cases Character. Name of the variable in `data` that contains the
 #' case counts.
 #' @param time Character. Name of the variable in `data` that contains the
-#' *epiyearweek* date temporal identifier (see [epiyearweek()]). It must be of
+#' *epiyearweek* date temporal identifier (see [epiyearweek]). It must be of
 #' type character.
 #' @param space Character. Name of the variable in `data` that  contains the
 #' spatial identifier for which a case count time series is available.
@@ -32,7 +32,7 @@
 #' @returns A data frame with the resulting descriptors for every
 #' epidemiological year.
 #'
-#' @seealso [desc_list()] to access the list of descriptors and its parameters.
+#' @seealso [desc_list] to access the list of descriptors and its parameters.
 #' @export
 #'
 #' @examples

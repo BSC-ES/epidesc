@@ -22,7 +22,7 @@ desc_year(
 case counts.}
 
 \item{time}{Character. Name of the variable in \code{data} that contains the
-\emph{epiyearweek} date temporal identifier (see \code{\link[=epiyearweek]{epiyearweek()}}). It must be of
+\emph{epiyearweek} date temporal identifier (see \link{epiyearweek}). It must be of
 type character.}
 
 \item{space}{Character. Name of the variable in \code{data} that  contains the
@@ -95,5 +95,5 @@ res <- desc_year(
 )
 }
 \seealso{
-\code{\link[=desc_list]{desc_list()}} to access the list of descriptors and its parameters.
+\link{desc_list} to access the list of descriptors and its parameters.
 }
