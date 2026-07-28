@@ -24,7 +24,7 @@ characterise different transmission profiles of infectious diseases. The work is
 published in PLOS neglected tropical diseases by Iasmim Ferreira de Almeida, Raquel Martins Lana and Cláudia Torres Codeço in 2022.
 
 While we include all the indicators contained in the original publication, **epidesc** aims to expand this list of indicators,
-welcoming contributions from researchers (please open an issue and we'll discuss!).
+welcoming contributions from researchers (please open an issue or send us an email and we'll discuss!).
 
 To show the functionality of the package, we load weekly dengue data for municipalities in Rio de Janeiro.
 
