@@ -2,13 +2,11 @@ test_that("des_list contains all relevant info", {
   descriptor_list <- desc_list()
 
   # Table names
-  expect_equal(
-    names(descriptor_list),
-    c("class", "fun", "description", "param1", "param2")
-  )
+  expect_named(descriptor_list,
+               c("class", "fun", "description", "param1", "param2"))
 
   # Descriptor list
-  expect_equal(
+  expect_identical(
     descriptor_list$fun,
     c(
       "Ap",

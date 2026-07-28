@@ -16,6 +16,10 @@
   do.call(rbind, dfs)
 }
 
+# I wonder what the benefit is of doing it like this, basically harcoding
+# the dataframe into the code, instead of just adding a dataframe as data
+# (and filling in the missing fileds manually with NA)
+# Then rbind_fill_base would not be needed
 
 .descriptors_list <- .rbind_fill_base(
   # Peak indicators
@@ -111,5 +115,5 @@ desc_list <- function() {
   )]
   descriptors[is.na(descriptors)] <- ""
 
-  return(descriptors)
+  descriptors
 }

@@ -21,3 +21,6 @@ The computed Cnf epidescriptor.
 Frequency of periods of consecutive 'n' weeks or longer with at
 least 'x' cases.
 }
+\examples{
+desc_Cnf(dengueRio, 3, 50)
+}

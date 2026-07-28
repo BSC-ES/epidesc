@@ -1,6 +1,6 @@
 test_that("Ap works", {
-  expect_equal(desc_Ap(data.frame(cases = c(4, 1, 6))), 6)
-  expect_equal(desc_Ap(data.frame(cases = rep(0, 6))), 0)
+  expect_identical(desc_Ap(data.frame(cases = c(4, 1, 6))), 6)
+  expect_identical(desc_Ap(data.frame(cases = rep(0, 6))), 0)
 })
 
 test_that("Tp works", {
@@ -12,5 +12,5 @@ test_that("Tp works", {
       length.out = 4
     ))
   )
-  expect_equal(desc_Tp(testdf), "202504")
+  expect_identical(desc_Tp(testdf), "202504")
 })
