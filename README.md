@@ -100,7 +100,9 @@ Raquel M. Lana is funded by the European Union (Marie Sklodowska-Curie Actions, 
 
 Diego Ricardo Xavier and Raquel M. Lana acknowledge the project CNPq 445194/2024-3 - Development of Indicators for the Detection and Characterization of Anomalies in Climate-Sensitive Tropical Diseases in Brazil.
 
-Rachel Lowe and Claudia T. Codeço acknowledge the Wellcome Trust (HARMONIZE 224694/Z/21/Z and IDExtremes 226069/Z/22/Z).
+Rachel Lowe, Claudia T. Codeço and Christovam Barcellos acknowledge the Wellcome Trust HARMONIZE 224694/Z/21/Z.
+
+Rachel Lowe and Claudia T. Codeço acknowledge the Wellcome Trust IDExtremes 226069/Z/22/Z.
 
 Iasmim Almeida acknowledges the Wellcome Trust (Mosqlimate 226088/Z/22/Z) and the Coordenação de Aperfeiçoamento de Pessoal de Nível Superior (CAPES, Finance Code 001).
 
