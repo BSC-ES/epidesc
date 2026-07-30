@@ -36,7 +36,7 @@ knitr::kable(desc_list())
 ```
 
 | class | fun | description | param1 | param2 |
-|:---|:---|:---|:---|:---|
+|:--------------|:--------------|:--------------|:--------------|:--------------|
 | Peak | Ap | Maximum cases peak - amplitude |  |  |
 | Peak | Tp | Week where the maximum peak occurred - time |  |  |
 | Period with cases | Cnf | Frequency of periods of consecutive 'n' weeks or longer with at least 'x' cases | n | x |
@@ -93,3 +93,15 @@ Oswaldo Cruz Foundation (Fiocruz)
 [**Rachel Lowe, PhD**](https://www.bsc.es/lowe-rachel) <a href="https://orcid.org/0000-0003-3939-7343" style="margin-left: 15px;"><img src="https://orcid.org/sites/default/files/images/orcid_16x16.png" alt="ORCID" style="width: 16px; height: 16px;"/></a>\
 Barcelona Supercomputing Center (BSC)\
 Catalan Institution for Research & Advanced Studies (ICREA)
+
+### Acknowledgments
+
+Raquel M. Lana is funded by the European Union (Marie Sklodowska-Curie Actions, grant agreement 101109642).
+
+Diego Ricardo Xavier and Raquel M. Lana acknowledge the project CNPq 445194/2024-3 - Development of Indicators for the Detection and Characterization of Anomalies in Climate-Sensitive Tropical Diseases in Brazil.
+
+Rachel Lowe and Claudia T. Codeço acknowledge the Wellcome Trust (HARMONIZE 224694/Z/21/Z and IDExtremes 226069/Z/22/Z).
+
+Iasmim Almeida acknowledges the Wellcome Trust (Mosqlimate 226088/Z/22/Z) and the Coordenação de Aperfeiçoamento de Pessoal de Nível Superior (CAPES, Finance Code 001).
+
+Daniela Lührsen was supported by the Barcelona Supercomputing Center AI4Science Fellowship programme funded by the Recovery and Resilience Mechanism-Next Generation as part of the Spanish Ministry's Recovery, Transformation and Resilience Plan.
