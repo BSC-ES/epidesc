@@ -19,12 +19,11 @@ knitr::opts_chunk$set(
 ## Overview
 
 The R package **epidesc** provides the tools to easily compute a series of epidemiological indicators to
-characterise different transmission profiles of infectious diseases. The work is based on the publication
+characterise different transmission patterns of infectious diseases. The work is based on the publication
 [How heterogeneous is the dengue transmission profile in Brazil? A study in six Brazilian states](https://doi.org/10.1371/journal.pntd.0010746) 
-published in PLOS neglected tropical diseases by Iasmim Ferreira de Almeida, Raquel Martins Lana and Cláudia Torres Codeço in 2022.
+published in PLOS Neglected Tropical Diseases by Iasmim Ferreira de Almeida, Raquel Martins Lana and Cláudia Torres Codeço in 2022.
 
-While we include all the indicators contained in the original publication, **epidesc** aims to expand this list of indicators,
-welcoming contributions from researchers (please open an issue or send us an email and we'll discuss!).
+While **epidesc** includes all the descriptors proposed in the original publication, we aim to continuously expand its library of epidemiological descriptors. Contributions are always welcome! Please open an issue or contact us by email to discuss your ideas.
 
 To show the functionality of the package, we load weekly dengue data for municipalities in Rio de Janeiro.
 
@@ -42,11 +41,10 @@ head(dengueRio)
 1. The input must be a `data.frame` containing the case counts and the corresponding spatial and temporal identifiers with no missing values. 
 In the sample dataset, these are the columns `cases` (number of dengue cases), `date` (temporal identifier), and `muni_code` (spatial identifier).
 2. The data must be aggregated at the weekly level, with dates stored in `Date` format.
-3. Each time series must be regular, with a 7-day interval between consecutive observations. If no cases are reported for a given spatial unit in a particular 
-epidemiological week, that observation must still be included in the dataset with the case count set to zero.
+3. Each time series must be regular, with a 7-day interval between consecutive observations. If no cases are reported for a given spatial unit in a particular epidemiological week, that observation must still be included in the dataset with the case count set to zero.
 4. If an incidence descriptor is required, the population at risk also needs to be provided.
 
-If any of these requirements aren't met, the package function will throw error messages to let you know what's happening. 
+If any of these requirements are not met, the package function will throw error messages to let you know what is happening. 
 
 ## Formatting dates
 
@@ -89,9 +87,7 @@ In our case, we are interested in computing the following indicators:
 * *Cnf* with 'n' equal to 3 and 'x' equal to 5
 * *Inc* for 100,000 persons
 
-To compute these indicators, we need to pass a nested list to the `desc_year` function. In the first level, we state the output names
-of the descriptors that we want to use, and in the second level, we specify the name of the function `fun` as in the table above as well
-as the parameters (`x`, `n` or `p` depending on the descriptor): 
+To compute these descriptors, we need to pass a nested list to the `desc_year` function. In the first level, we state the output descriptors names that we would like to use, and in the second level, we specify the name of the function `fun` as in the table above as well as the parameters (`x`, `n` or `p` depending on the descriptor): 
 
 ```{r}
 descriptors <- list(
@@ -103,10 +99,7 @@ descriptors <- list(
 ```
 
 The last detail we need to consider is the epidemiological week we want to use as the start
-of the year for computing yearly descriptors. For many diseases, such as dengue in Brazil, the start of the season does not coincide with the
-1st of January but rather it occurs much later in the year, so it makes more sense to use this time point. We can specify the first epidemiological
-week with the argument `sweek`. In our example, we set it to week 41, meaning that yearly descriptors for year `t` will be computed starting from
-week 41 of year `t` until week 40 of year `t+1`.
+of the year for computing yearly descriptors. For many diseases, such as dengue in Brazil, the start of the season does not coincide with the 1st of January but rather it occurs much later in the year, so it makes more sense to use this time point. We can specify the first epidemiological week with the argument `sweek`. In our example, we set it to week 41, meaning that yearly descriptors for year `t` will be computed starting from week 41 of year `t` until week 40 of year `t+1`.
 
 Now we are ready to finally compute our descriptors with a call to `desc_year`:
 
@@ -128,9 +121,11 @@ Our descriptors have been computed! Let's have a look at the results of epidemio
 head(res[res$epiyear == "2020/2021", ])
 ```
 
-Note that for epiyears where not all weeks are available or there are missing cases, the result will be NA, e.g. at the start and end
-of the time series where the epidemiological year is not complete:
+Descriptors are calculated only for **complete epidemiological years**. If an epidemiological year has missing weeks or missing case records, the corresponding descriptors will be returned as NA. This typically occurs at the beginning and end of a time series, where the first or last epidemiological year is incomplete.
+
+For example, although the dataset starts in the first SE of 2017, the epidemiological year 2016/2017 begins in epidemiological week 41 of 2016. Because data are only available from 2017 onward, this epidemiological year is incomplete and its descriptors are returned as NA. The same applies to the final epidemiological year if the dataset ends before all epidemiological weeks are available (e.g., 2022).
 
 ```{r}
+head(res[res$epiyear == "2016/2017", ])
 head(res[res$epiyear == "2022/2023", ])
 ```
