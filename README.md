@@ -99,7 +99,7 @@ Oswaldo Cruz Foundation (Fiocruz)
 Barcelona Supercomputing Center (BSC)\
 Catalan Institution for Research & Advanced Studies (ICREA)
 
-### Acknowledgments
+## Acknowledgments
 
 Raquel M. Lana is funded by the European Union (Marie Sklodowska-Curie Actions, grant agreement 101109642).
 
@@ -112,3 +112,5 @@ Rachel Lowe and Claudia T. Codeço acknowledge the Wellcome Trust IDExtremes 226
 Iasmim Almeida acknowledges the Wellcome Trust (Mosqlimate 226088/Z/22/Z) and the Coordenação de Aperfeiçoamento de Pessoal de Nível Superior (CAPES, Finance Code 001).
 
 Daniela Lührsen was supported by the Barcelona Supercomputing Center AI4Science Fellowship programme funded by the Recovery and Resilience Mechanism-Next Generation as part of the Spanish Ministry's Recovery, Transformation and Resilience Plan.
+
+Christovam Barcellos acknowledges financial support from CNPq (process 444665/2023-4) and the Pasteur Network (Climate–Health Observatory Accelerator Project).
