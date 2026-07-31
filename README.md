@@ -1,7 +1,7 @@
 # epidesc <img src="inst/figures/logo_BSC.png" align="right" width="16%"/>
 
 <!-- badges: start -->
-[![License](http://img.shields.io/badge/license-GPL%20%28%3E=%202%29-brightgreen.svg?style=flat)](https://www.gnu.org/licenses/old-licenses/gpl-2.0.html)
+[![License](http://img.shields.io/badge/license-GPL%20%28%3E=%202%29-brightgreen.svg?style=flat)]
 [![R-CMD-check](https://github.com/BSC-ES/epidesc/actions/workflows/R-CMD-check.yaml/badge.svg)](https://github.com/BSC-ES/epidesc/actions/workflows/R-CMD-check.yaml)
 <!-- badges: end -->
 
@@ -58,7 +58,7 @@ knitr::kable(desc_list())
 
 ## Contributions
 
-If you woud like to contribute a new descriptor to `epidesc`, please
+If you would like to contribute a new descriptor to `epidesc`, please
 open an issue with your idea or get in touch with Raquel Martins Lana
 ([raquel.lana\@bsc.es](mailto:raquel.lana@bsc.es),
 [raquelmlana\@gmail.com](mailto:raquelmlana@gmail.com)) or
