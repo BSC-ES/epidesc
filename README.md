@@ -1,7 +1,7 @@
 # epidesc <img src="inst/figures/logo_BSC.png" align="right" width="16%"/>
 
 <!-- badges: start -->
-[![License](http://img.shields.io/badge/license-GPL%20%28%3E=%202%29-brightgreen.svg?style=flat)]
+![License](http://img.shields.io/badge/license-GPL%20%28%3E=%202%29-brightgreen.svg?style=flat)
 [![R-CMD-check](https://github.com/BSC-ES/epidesc/actions/workflows/R-CMD-check.yaml/badge.svg)](https://github.com/BSC-ES/epidesc/actions/workflows/R-CMD-check.yaml)
 <!-- badges: end -->
 
