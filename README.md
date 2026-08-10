@@ -3,6 +3,9 @@
 <!-- badges: start -->
 ![License](http://img.shields.io/badge/license-GPL%20%28%3E=%202%29-brightgreen.svg?style=flat)
 [![R-CMD-check](https://github.com/BSC-ES/epidesc/actions/workflows/R-CMD-check.yaml/badge.svg)](https://github.com/BSC-ES/epidesc/actions/workflows/R-CMD-check.yaml)
+[![CRAN status](https://www.r-pkg.org/badges/version/epidesc)](https://cran.r-project.org/package=epidesc)
+[![CRAN downloads total](http://cranlogs.r-pkg.org/badges/grand-total/epidesc)](https://cran.r-project.org/package=epidesc)
+[![CRAN downloads month](http://cranlogs.r-pkg.org/badges/epidesc)](https://cran.r-project.org/package=epidesc)
 <!-- badges: end -->
 
 ## Overview
@@ -23,7 +26,8 @@ Before computing the descriptors, ensure the data meet the following requirement
 -   The data needs to be weekly with dates in Date format.
 -   If an incidence descriptor is required, the population at risk also needs to be provided.
 
-To find out more, please see the package vignette by typing `vignette("epidesc")`.
+To find out more, please see the package vignette by typing `vignette("epidesc")` or visit 
+the [online version](https://cran.r-project.org/web/packages/epidesc/vignettes/epidesc.html).
 
 ## Included descriptors
 
