@@ -73,15 +73,15 @@ warning systems, and spatial epidemiology.
 Climate-sensitive diseases such as dengue, malaria, and leptospirosis
 exhibit heterogeneous transmission dynamics across space and time,
 driven by climatic, demographic, and socioeconomic factors
-`[@deAlmeida2022; @Alcayna2025]`. Studies have demonstrated that the
+[@deAlmeida2022; @Alcayna2025]. Studies have demonstrated that the
 spatio-temporal diffusion of dengue is conditioned by population
 mobility, vector distribution, and local social and environmental
 characteristics, producing distinct epidemic patterns even at the
-neighbourhood scale `[@Xavier2017]`. Understanding and classifying these
+neighbourhood scale [@Xavier2017]. Understanding and classifying these
 dynamics is essential for designing targeted surveillance strategies and
 allocating resources efficiently. Inspired by the epi-features
 calculated for influenza curves conceived by [@Tabataba2017], 
-`@deAlmeida2022` proposed a set of 13 epi-descriptors to
+@deAlmeida2022 proposed a set of 13 epi-descriptors to
 characterise dengue transmission patterns in Brazilian municipalities,
 demonstrating their utility for clustering areas into persistent,
 epidemic, and episodic transmission categories. However, the original
@@ -101,22 +101,22 @@ transmission patterns.
 # State of the field
 
 Several R packages support epidemiological time series analysis. Early
-tools like `surveillance` `[@Meyer2017]` and `EpiEstim` `[@Cori2013]`
+tools like `surveillance` [@Meyer2017] and `EpiEstim` [@Cori2013]
 established standard frameworks for outbreak detection and real-time
 reproduction number ($R_t$) estimation. Accelerated by the COVID-19
 pandemic, the wider Epiverse-TRACE software initiative has significantly
-expanded this toolkit. Modern packages include `EpiNow2` `[@Abbott2026]`
+expanded this toolkit. Modern packages include `EpiNow2` [@Abbott2026]
 for Bayesian estimation of infection trajectories and $R_t$ under
-reporting delays, `incidence2` `[@Taylor2024]` for computing and
+reporting delays, `incidence2` [@Taylor2024] for computing and
 visualising incidence curves, and specialized tools such as
-`epiparameter` `[@Lambert2025]` for epidemiological parameter
-extraction. Outside the R ecosystem, `EpiViewer` `[@Thorve2018]`
+`epiparameter` [@Lambert2025] for epidemiological parameter
+extraction. Outside the R ecosystem, `EpiViewer` [@Thorve2018]
 provides a web-based framework for exploring, comparing, and organising
 epidemiological time series, with built-in computation of general
 epidemic features such as peak timing and magnitude, cumulative counts,
 and first take-off time. `Epipoi` is an useful epidemiological time
 series analysis tool for detecting trends, seasonality, anomalies and
-spatial patterns `[@Alonso2012]`. It was developed and compiled in
+spatial patterns [@Alonso2012]. It was developed and compiled in
 MATLAB but its last version is outdated. However, none of these packages
 provide a dedicated framework for computing the specific set of temporal
 descriptors needed to characterise and classify disease transmission
@@ -137,10 +137,10 @@ accommodate the addition of new descriptors from the research community.
 
 `epidesc` is structured as a standard R package following CRAN
 conventions, with comprehensive documentation via roxygen2
-`[@Wickham2026]`, unit tests using testthat `[@Wickham2011]`, and a
+[@Wickham2026], unit tests using testthat [@Wickham2011], and a
 vignette demonstrating the complete workflow. The package depends on
-lubridate `[@Grolemund2011]` for date manipulation and nseq
-`[@Saldanha2024]` for efficient run-length encoding operations on time
+lubridate [@Grolemund2011] for date manipulation and nseq
+[@Saldanha2024] for efficient run-length encoding operations on time
 series.
 
 `epidesc` is available on CRAN
@@ -151,22 +151,22 @@ three-step pipeline (\autoref{fig:fig1}):
 
 ![Schematic pipeline of the `epidesc` package. Input data containing weekly case counts with spatial and temporal identifiers are processed across three stages: date formatting with epiyearweek(), descriptor selection via desc_list(), and computation with desc_year(), producing epidemiological descriptors per spatial unit and epidemiological year.\label{fig:fig1}](figure.png){ width=20% }
 
-*Input data:* As input, `epidesc` requires a dataframe containing
+**Input data:** As input, `epidesc` requires a dataframe containing
 epidemiological line-list data. This dataframe must include at least 3
 columns: weekly case counts, a spatial identifier and a date.   
-*Step 1 — Date formatting:* the function epiyearweek() converts Date 
+**Step 1 — Date formatting:** the function epiyearweek() converts Date 
 vectors into epidemiological year-week identifiers (format yyyyww), 
 supporting both ISO weeks (starting Monday) and epidemiological 
 weeks (starting Sunday).      
-*Step 2 — Descriptor specification:* users select descriptors from a
+**Step 2 — Descriptor specification:** users select descriptors from a
 built-in catalogue accessible via desc_list(), specifying parameters
 such as the minimum number of consecutive weeks or the case threshold.
 The catalogue currently includes 11 epi-descriptors organised into four
 classes (Table 1).       
-*Step 3 — Computation:* the main function desc_year()
+**Step 3 — Computation:** the main function desc_year()
 computes all specified epi-descriptors by spatial unit and
 epidemiological year.     
-*Output:* `epidesc` provides an object that stores
+**Output:** `epidesc` provides an object that stores
 selected epi-descriptors calculated by year or epidemiological year and
 spatial unit identifier.    
 
@@ -241,7 +241,7 @@ after installation.
 # Research impact statement
 
 The methodological framework implemented in `epidesc` was originally
-developed and applied in `@deAlmeida2022`, which
+developed and applied in @deAlmeida2022, which
 classified 1,823 Brazilian municipalities into four distinct dengue
 transmission patterns (persistent, epidemic, episodic/epidemic, and
 episodic) using data from 2010 to 2019. That study demonstrated the
