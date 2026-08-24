@@ -80,7 +80,7 @@ characteristics, producing distinct epidemic patterns even at the
 neighbourhood scale `[@Xavier2017]`. Understanding and classifying these
 dynamics is essential for designing targeted surveillance strategies and
 allocating resources efficiently. Inspired by the epi-features
-calculated for influenza curves conceived by `[@Tabataba2017]`, 
+calculated for influenza curves conceived by [@Tabataba2017], 
 `@deAlmeida2022` proposed a set of 13 epi-descriptors to
 characterise dengue transmission patterns in Brazilian municipalities,
 demonstrating their utility for clustering areas into persistent,
