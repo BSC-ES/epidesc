@@ -149,7 +149,7 @@ development version can be accessed at
 <https://github.com/BSC-ES/epidesc>. The software architecture follows a
 three-step pipeline (\autoref{fig:fig1}):
 
-![Schematic pipeline of the `epidesc` package. Input data containing weekly case counts with spatial and temporal identifiers are processed across three stages: date formatting with epiyearweek(), descriptor selection via desc_list(), and computation with desc_year(), producing epidemiological descriptors per spatial unit and epidemiological year.\label{fig:fig1}](figure.png){ width=20% }
+![Schematic pipeline of the `epidesc` package. Input data containing weekly case counts with spatial and temporal identifiers are processed across three stages: date formatting with epiyearweek(), descriptor selection via desc_list(), and computation with desc_year(), producing epidemiological descriptors per spatial unit and epidemiological year.\label{fig:fig1}](figure.png){ width=90% }
 
 **Input data:** As input, `epidesc` requires a dataframe containing
 epidemiological line-list data. This dataframe must include at least 3
