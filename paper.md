@@ -33,6 +33,7 @@ authors:
   - name: Rachel Lowe
     orcid: 0000-0003-3939-7343
     affiliation: "1, 5"
+    corresponding: true
 affiliations:
   - name: Barcelona Supercomputing Center, Spain
     index: 1
